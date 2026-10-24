@@ -1,6 +1,6 @@
 /build/
 /dist/
-/成品/
+/dist/
 /vendor/*.exe
 /vendor/*.dll
 __pycache__/

@@ -14,11 +14,11 @@ BEGIN
  BEGIN
   BLOCK "080404b0"
   BEGIN
-   VALUE "FileDescription", "小马压缩\0"
-   VALUE "ProductName", "小马压缩\0"
+   VALUE "FileDescription", "Xiaoma Archive\0"
+   VALUE "ProductName", "Xiaoma Archive\0"
    VALUE "FileVersion", "1.1.4\0"
    VALUE "ProductVersion", "1.1.4\0"
-   VALUE "OriginalFilename", "小马压缩.exe\0"
+   VALUE "OriginalFilename", "Xiaoma Archive.exe\0"
   END
  END
  BLOCK "VarFileInfo"

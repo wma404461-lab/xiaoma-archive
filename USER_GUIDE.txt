@@ -1,0 +1,21 @@
+Xiaoma Archive - background context-menu edition
+
+Right-click a file or folder to create ZIP or 7z archives, or store files without compression. Right-click an archive to extract it into a separate folder. Password-protected archives show a password prompt. The advanced compression dialog provides password and split-volume options.
+
+On Windows 11, classic menus appear under Show more options or Shift+F10. Context-menu compression accepts one selected file or folder; the management window also supports batch operations.
+
+Background tasks show a temporary tray icon. Right-click it to cancel. It exits when the task finishes. This utility has no background startup entry, network access or telemetry. Output is placed beside the source by default, with numbered names to avoid overwriting existing results. Redundant nested root folders are reduced during extraction.
+
+Cancellation and errors remove temporary results for the current task; successful items from a batch are retained. A forced process termination or power loss may leave .xiaoma-work-* folders. Remove them only after the application has stopped. The latest result is stored in LocalAppData/XiaomaArchive/last-operation.json. Passwords are not written to logs.
+
+Create ZIP, 7z or TAR; TAR stores files without compression. The independent 7-Zip engine reads formats including RAR, ZIP, 7z, TAR, GZ, BZ2, XZ, ZSTD, CAB, ISO and WIM. Fast ZIP mode identifies already-compressed media by extension and stores it to avoid wasted computation; a filename alone cannot prove the content is compressed. Choose a stronger mode when appropriate. 7z dictionaries are 512 KB, 4 MB and 8 MB, with at most two threads.
+
+ZIP encryption uses AES-256, which some older software and Windows built-in extractors do not support. ZIP passwords are limited to ASCII; use 7z for Unicode passwords and encrypted filenames. Passwords exist in task memory and engine process arguments, not configuration or logs.
+
+Keep every split volume in the same folder. RAR later volumes locate the first volume automatically; choose .001 for split 7z files. Unsafe paths, alternate data streams, reserved system names, symbolic links and junctions are rejected. Archive listings are limited to 200,000 entries and source folders to 1,000,000 items. Handle source files on different drives separately. Do not archive a drive root directly; output must be outside the input folder.
+
+The optional management window provides search, sorting, selected extraction, read-only text preview, archive information, ZIP/7z add/remove operations, conversion and validation. Double-click a folder to filter entries and use More to return. Double-clicking a file previews text without executing it. Text preview is limited to 2 MB. ZIP/7z editing operates on a validated copy and retains the original as .bak. Conversion creates a new archive without modifying the original. RAR and split-volume editing are unsupported; convert first. RAR creation, damaged-RAR repair and self-extracting EXE creation are not implemented.
+
+Keep engine/ beside the executable. No .NET, browser runtime or WinRAR is needed. Re-register context menus after moving the program. Windows manages default file associations; the utility does not bypass UserChoice validation. Performance depends on CPU, storage, files and format.
+
+Third-party engine: 7-Zip 26.04, Copyright Igor Pavlov. GNU LGPL 2.1 or later, with BSD components and unRAR restrictions. See engine/7-Zip-LICENSE.txt and https://github.com/ip7z/7zip/releases/tag/26.04 for the corresponding source. The unmodified engine can be replaced separately.

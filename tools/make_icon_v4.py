@@ -29,7 +29,7 @@ def build():
     canonical.save(ASSETS/'xiaoma-compress-inverse.png',compress_level=9)
     data=base64.b64encode((ASSETS/'xiaoma-compress.png').read_bytes()).decode('ascii')
     svg=f'''<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-<title>小马压缩 · 蓝色拉链包与象牙白马</title>
+<title>Xiaoma Archive · Blue Zip Package and Ivory Xiaoma</title>
 <desc>specRevision={REVISION}; imagegen artwork, embedded PNG. Editable image placement/container; not a pure vector path illustration.</desc>
 <image id="horse-archive-artwork" x="0" y="0" width="512" height="512" href="data:image/png;base64,{data}"/>
 </svg>'''
