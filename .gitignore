@@ -1,0 +1,8 @@
+/build/
+/dist/
+/成品/
+/vendor/*.exe
+/vendor/*.dll
+__pycache__/
+*.pdb
+*.obj
